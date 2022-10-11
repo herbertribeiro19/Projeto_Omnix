@@ -2,7 +2,9 @@
 * {
     margin: 0;
     padding: 0;
+    border: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
 /* Limpando os pontos das Listas */
@@ -10,127 +12,231 @@ ul {
     list-style: none;
 }
 
+body* {
+    display: flex;
+}
+
 /* Aplicando o background e seus alinhamentos */
 body {
-    background-image: url(./assets/bg.jpg);
+    background-image: url(./assets/bg.png);
     background-position: top center;
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-color: #121214;
-}
-
-/* aplicando fonte (Inter) do arquivo importado como link no .HTML */
-body* {
-    font-family: 'Inter', sans-serif;
-    line-height: 160px;
+    min-height: 100vh;
+    min-width: 100vw;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 header{
     padding-top: 32px;
 }
 
+.options a{
+    color: #ffffff;
+    padding-top: 2px;
+}
+
+.options{
+    letter-spacing: -0.47px;
+}
+
+.options h1{
+    font-size: 20px;
+    color: #ffffff;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    letter-spacing: -0.47px;
+}
+
+.options h2{
+    font-size: 15px;
+    color: #ffffff;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    letter-spacing: -0.47px;
+}
+
+div.container{
+    max-width: 250px;
+    margin: 5px auto; 
+    background-color: white;
+    min-height: 1hv;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+main h4{
+    font-weight: 00;
+    margin-bottom: 2rem;
+    position: relative;
+    text-align: center;
+}
+
+main h4::before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 40px;
+    bottom: -2px;
+    align-items: center;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #FF3131 , #000000);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field{
+    position: relative;
+}
+
+form .input-field:first-child{
+    margin-bottom: 1.5rem;
+}
+
+.input-field .underline::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.input-field .underline::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg, #FF3131 , #000000);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+.input-field input:focus ~ .underline::after{
+    transform: scaleX(1);
+}
+
+
+.input-field input{
+    outline: none;
+    font-size: 0.9rem;
+    color:rgba(0, 0, 0, 0.7);
+}
+
+.input-field input::placeholder{
+    color:rgba(0, 0, 0, 0.5);
+}
+
+form input[type="submit"]{
+    margin-top: 2rem;
+    padding: 0.4rem;
+    background: linear-gradient(45deg, #FF3131 , #000000);
+    cursor: pointer;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+form input[type="submit"]:hover{
+    letter-spacing: 0.4px;
+    background: linear-gradient(to right, #FF3131 , #000000);
+}
+
+
 header div{
     width: 120px;
     margin: auto; 
-    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%); /* caixa section full color*/
-    border-radius: 50%;
+    background-image: linear-gradient(90deg, #FF3131 0%, #ffffff 50.52%, #FF3131 100%); 
+    border-radius: 100%;
     display: flex;
-    padding: 4px;
-    transition: transform .3s; /* suavizando a animação de escala ao passar o cursor do mouse para 0.3seg*/
+    padding: 3px;
+    transition: transform .3s; 
 }
 
-/* aplicando a animação e mudando escala ao passar o cursor do mouse*/
+
 header div:hover{
     transform: scale(1.1)
 }
 
 header div img{
-    width: 100%; /* aplicando o tamanho da img*/
+    width: 100%;
     border-radius: 50%;
 }
 
-/* GERAL: aplicando margem automatica com largura de 90% da borda da tela */
+  
 main {
     max-width: 580px;
     width: 90%;
-    margin: 32px auto; /* primeiro elemento é o espaçamento de cima e o segundo é o espaçamento de baixo*/
-
-    display: grid; /* mantendo elementos da lista de forma horizontal*/
-    gap: 24px; /* espaçamento dos elementos da lista*/
-    margin-top: 32px;
+    margin: 32px auto; 
+    display: grid; 
+    gap: 24px; 
+    margin-top: 30px;
 }
 
-/* Aplicando a cor branca e largura de 160% para as sections */
-section {
-    color: white;
-    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%); /* caixa section full color*/
-    padding-top: 4px;
-    border-radius: 10px;
-}
-
-section div {
-    background-color: #2A2634;
-    padding: 32px;
-    padding-top: 24px;
+section1 div {
+    background-color: #505051;
+    padding: 1px;
+    padding-top: 1px;
     border-radius: 8px;
 }
 
-/* Espaçamento da letra e cor da fonte*/
-section h2 {
+section1 h2 {
     letter-spacing: -0.47px;
 }
 
-section p {
-    letter-spacing: -0.18px;
-    color: #a1a1aa;
-} 
-
-/* Alinhamento lado a lado, espaçamento lateral e espaçamento do topo */
-section ul {
+.header-2 {
     display: flex;
+    display: grid;
     flex-wrap: wrap;
-    gap: 16px;
-    margin-top: 24px;
+    gap: 20px;
+    padding-top: 2px;
+    padding-block-end: 4px;
 }
 
-section ul li{
-    transition: transform .3s;
+/* -------> ANIMATIONS <-------*/
+
+section1 ul li{
+    transition: transform .1s;
 }
 
-section ul li:hover{
+section1 ul li:hover{
     transform: scale(1.1)
 }
 
-
-/* Aplicando borda nas imagens das listas e tamanho (width */
-.List-games img {
-    width: 90px;
-    border-radius: 10px;
-}
-
-.List-channel img {
-    width: 70px;
-    border-radius: 50px;
-    border: 1px solid #443E54;
-}
-
-header div{
-    animation: fromTop .7s .2s backwards;
-}
-
-main section {
+main section1 h1{
     animation: fromBottom .7s backwards;
 }
 
-main section:nth-child(1){
+main section1 h2{
+    animation: fromBottom .9s backwards;
+}
+
+main section2{
+    animation: fromBottom .7s .2s backwards;
+}
+
+main section1:nth-child(1){
     animation-delay: 0 ;
 }
 
-main section:nth-child(2) {
+main section1:nth-child(2) {
     animation-delay: .4s;
 }
 
-main section:nth-child(3) {
+main section1:nth-child(3) {
     animation-delay: .8s;
 }
 
