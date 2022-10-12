@@ -9,8 +9,7 @@
 ## Tecnologias utilizadas:
 - HTML;
 - CSS;
-- JS;
-- TypeScript;
+- JavaScript;
 - Git e Github;
 
 ## Contato
