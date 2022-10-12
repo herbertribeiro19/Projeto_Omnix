@@ -1,6 +1,6 @@
 # Desafio Técnico - Front End Jr
 
-
+![PREVIEW](./.github/preview.png)
 
 > Omnix Digital Experience
 
