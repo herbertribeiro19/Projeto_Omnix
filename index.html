@@ -12,11 +12,11 @@
     <title>Planos de Internet - Home</title>
 
     <link rel="stylesheet" href="./styles.css">
-    
+    <script defer src="./main.js"></script>
 </head>
 
 <body>
-    <script type="javascript" src="./main.js"></script>
+    
     <header>
         <div>
             <img src="./assets/logo.png" alt="logomarca">
@@ -40,13 +40,13 @@
         <section2>
             <div class="container">
                 <h4>Informe seu CEP</h4>
-                    <form action="">
+                    <form action="main.js">
                             <div class="input-field">
                                 <input type="CEP" name="CEP" id="cep" placeholder="Digite seu CEP aqui">
                                 <div class="underline"></div>
                             </div>  
                             <div>
-                                <input type="submit" name="enviar" value="Enviar">  
+                                <input type="submit" name="enviar" id="sub" value="Enviar">  
                             </div>
                     </form>
             </div>
